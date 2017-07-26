@@ -9,7 +9,7 @@ module.exports = function(options) {
     return multipipe(
       gulp.src(options.src, {since: gulp.lastRun(options.since)}),
       $.newer('public'),
-      gulp.dest('public')
+      gulp.dest('public/img')
     ).on('error', $.notify.onError());
   };
 };

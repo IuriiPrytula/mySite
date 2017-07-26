@@ -16,25 +16,33 @@ lazyRequireTask('styles', './gulp-tasks/styles.js', {
   since: 'styles'
 });
 
+lazyRequireTask('pug', './gulp-tasks/pug.js', {
+  src: 'frontend/assets/pages/*.pug',
+  since: 'pug',
+  dst: 'public',
+  pretty: "  "
+});
+
 lazyRequireTask('clean', './gulp-tasks/clean.js', {
   dst: 'public'
 });
 
-lazyRequireTask('assets', './gulp-tasks/assets.js', {
-  src: 'frontend/assets/**',
-  since: 'assets',
-  dst: 'public'
+lazyRequireTask('images', './gulp-tasks/images.js', {
+  src: 'frontend/assets/img/**/*.*',
+  since: 'images',
+  dst: 'public/img'
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('styles', 'assets')));
+gulp.task('build:all', gulp.series('clean', gulp.parallel('pug', 'styles', 'images')));
 
 gulp.task('watch', function() {
   gulp.watch('frontend/styles/**/*.*', gulp.series('styles'));
-  gulp.watch('frontend/assets/**/*.*', gulp.series('assets'));
+  gulp.watch('frontend/assets/img/**/*.*', gulp.series('images'));
+  gulp.watch('frontend/assets/pages/**/*.pug', gulp.series('pug'));
 });
 
 lazyRequireTask('serve', './gulp-tasks/serve.js', {
   server: 'public'
 });
 
-gulp.task('dev', gulp.series('build', gulp.parallel('watch', 'serve')));
+gulp.task('dev', gulp.series('build:all', gulp.parallel('watch', 'serve')));

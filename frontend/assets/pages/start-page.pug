@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+    link(rel="stylesheet", href="main.css", type="text/css")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700")
+  body
+    .welcome-page__wrapper
+      .content
+        .card
+          .card__main
+            img.card__avatar_img(src="img/avatar.jpg", alt="My photo")
+            .card__name Iurii Prytula
+            .card__description: p.card__description_paragraph Hello, this is my personal page.
+            .card__socials
+              ul.socials
+                li.socials__item: a.socials__link.socials__link_fb(href="#"): i.fa.fa-facebook(aria-hiddeb="true")
+                li.socials__item: a.socials__link.socials__link_li(href="#"): i.fa.fa-linkedin(aria-hiddeb="true")
+                li.socials__item: a.socials__link.socials__link_gh(href="#"): i.fa.fa-github(aria-hiddeb="true")
+          nav.welcome-page__nav 
+            ul.welcome-page__nav__list
+              li.welcome-page__nav__item: a.welcome-page__nav__link(href="#") My portfolio
+              li.welcome-page__nav__item: a.welcome-page__nav__link(href="#") About me
+      .copyright
+        p.copyright__content Iurii Prytula | Created with love | &copy; 2017        

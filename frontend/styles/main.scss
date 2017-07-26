@@ -1,6 +1,109 @@
-@import '../node_modules/normalize.css/normalize.css';
-@import '../node_modules/flexboxgrid/css/flexboxgrid.min.css';
+@import 'flexboxgrid.scss';
+@import 'normalize.scss';
 
-.hello {
-  color: red;
+$mainFont: 'Roboto', sans-serif;
+$green: #00bfa5;
+
+body {
+  font-family: $mainFont;
+}
+.welcome-page__wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('img/background.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  flex: 1 0 auto;
+  justify-content: center;
+}
+.copyright {
+  flex: 0 0 auto;
+}
+.card {
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.card__main {
+    background-color: rgba(246, 247, 246, 0.85);
+}
+.card__avatar_img {
+  width: 150px;
+  border-radius: 150px;
+  margin: 24px 60px 24px 60px;
+}
+.card__name {
+  font-size: 1.2em;
+}
+.card__description {
+  font-size: 1em;
+  padding-top: 10px;
+
+  & .card__description_paragraph {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.socials {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.socials__item {
+  font-size: 1.8em;
+  padding: 16px 16px;
+
+  & i { 
+    color: $green;
+  }
+  & i:hover {
+    opacity: 0.6;
+  }
+}
+.welcome-page__nav__list {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.welcome-page__nav__item {
+  display: flex;
+  flex-grow: 1;
+  border-left: 1px solid #73cac2;
+  border-right: 1px solid #73cac2;
+  
+  &:first-of-type {
+    border-left: none;
+  }
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+.welcome-page__nav__link {
+  color: #fff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $green;
+  font-size: 1.1em;
+  text-decoration: none;
+  flex-grow: 1;
+
+  &:hover {
+    background-color: rgba(0,191,165,0.7);
+    transition: 0.5s;
+  }
+}
+.copyright {
+  color: rgba(246, 247, 246, 0.85); 
 }

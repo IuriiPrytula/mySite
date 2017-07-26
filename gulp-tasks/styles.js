@@ -4,7 +4,7 @@ const $ = require('gulp-load-plugins')();
 const gulp = require('gulp');
 const multipipe = require('multipipe');
 
-var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
+var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 module.exports = function(options) {
   return function() {

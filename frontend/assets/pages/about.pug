@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+  
+  include ../templates/head
+body
+  .wrapper
+    .intro
+      header.header
+        .container
+          .flexbox-container
+            .header-socials
+              ul.socials
+                li.socials__item: a.socials__link.socials__link_fb(href="#"): i.fa.fa-facebook(aria-hiddeb="true")
+                li.socials__item: a.socials__link.socials__link_li(href="#"): i.fa.fa-linkedin(aria-hiddeb="true")
+                li.socials__item: a.socials__link.socials__link_gh(href="#"): i.fa.fa-github(aria-hiddeb="true")
+            nav.header-nav
+              ul.header__nav__list
+                li.header__nav__item: a.header__nav__link(href="#") My portfolio
+                li.header__nav__item: a.header__nav__link(href="#") About me
+      .card
+        .card__main
+          .card__avatar
+            img.card__avatar_img(src="img/avatar.jpg", alt="My photo")
+          .card__name Iurii Prytula
+          .card__description: p.card__description_paragraph Hello, this is my personal page.

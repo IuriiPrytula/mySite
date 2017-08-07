@@ -33,11 +33,18 @@ lazyRequireTask('images', './gulp-tasks/images.js', {
   dst: 'public/img'
 });
 
-gulp.task('build:all', gulp.series('clean', gulp.parallel('pug', 'styles', 'images')));
+lazyRequireTask('js', './gulp-tasks/js.js', {
+  src: 'frontend/assets/js/**/*.*',
+  since: 'js',
+  dst: 'public/js'
+});
+
+gulp.task('build:all', gulp.series('clean', gulp.parallel('pug', 'styles','js' ,'images')));
 
 gulp.task('watch', function() {
   gulp.watch('frontend/styles/**/*.*', gulp.series('styles'));
   gulp.watch('frontend/assets/img/**/*.*', gulp.series('images'));
+  gulp.watch('frontend/assets/js/**/*.*', gulp.series('js'));
   gulp.watch('frontend/assets/pages/**/*.pug', gulp.series('pug'));
 });
 

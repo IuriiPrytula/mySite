@@ -1,73 +1,95 @@
-@import 'flexboxgrid.scss';
-@import 'normalize.scss';
-
 $mainFont: 'Roboto', sans-serif;
+$fontSize: 16px;
 $green: #00bfa5;
 
+@import '_normalize.scss';
+@import 'preloader';
+
+html,
 body {
   font-family: $mainFont;
+  font-size: $fontSize;
+  height: 100%;
 }
+
 .welcome-page__wrapper {
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  height: 100%;
+  align-items: center;
   background-image: url('img/background.jpg');
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
-.content {
-  flex: 1 0 auto;
-  justify-content: center;
-}
+
+
 .copyright {
   flex: 0 0 auto;
 }
-.card {
-  text-align: center;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.card__main {
-    background-color: rgba(246, 247, 246, 0.85);
-}
-.card__avatar_img {
-  width: 150px;
-  border-radius: 150px;
-  margin: 24px 60px 24px 60px;
-}
-.card__name {
-  font-size: 1.2em;
-}
-.card__description {
-  font-size: 1em;
-  padding-top: 10px;
 
+.card {
+  min-width: 20rem;
+  text-align: center;
+  border-radius: .3125rem;
+  overflow: hidden;
+  display: none;
+
+}
+
+.card__main {
+  background-color: rgba(#f6f7f6, 0.7);
+}
+
+.card__avatar {
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card__avatar_img {
+  width: 15.625rem;
+  border-radius: 18.75rem;
+}
+
+.card__name {
+  font-size: 1.4rem;
+}
+
+.card__description {
+  padding-top: .625rem;
   & .card__description_paragraph {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
-.socials {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.socials__item {
-  font-size: 1.8em;
-  padding: 16px 16px;
 
-  & i { 
-    color: $green;
-  }
-  & i:hover {
-    opacity: 0.6;
+.card__socials {
+  .socials {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    .socials__item {
+      font-size: 1.5rem;
+      padding: .625rem .625rem;
+      & i {
+        color: $green;
+      }
+      & i:hover {
+        opacity: 0.6;
+      }
+    }
   }
 }
+
 .welcome-page__nav__list {
   display: flex;
   justify-content: center;
@@ -76,34 +98,98 @@ body {
   margin-bottom: 0;
   list-style: none;
 }
+
 .welcome-page__nav__item {
   display: flex;
   flex-grow: 1;
   border-left: 1px solid #73cac2;
   border-right: 1px solid #73cac2;
-  
   &:first-of-type {
     border-left: none;
   }
-
   &:last-of-type {
     border-right: none;
   }
 }
+
 .welcome-page__nav__link {
   color: #fff;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   background-color: $green;
-  font-size: 1.1em;
   text-decoration: none;
   flex-grow: 1;
-
   &:hover {
-    background-color: rgba(0,191,165,0.7);
+    background-color: rgba(#00bfa5, 0.5);
     transition: 0.5s;
   }
 }
+
 .copyright {
-  color: rgba(246, 247, 246, 0.85); 
+  color: rgba(#f6f7f6, 0.85);
+  font-size: 0.8rem;
+}
+
+.header {
+  display: flex;
+}
+.header-socials {
+  .socials {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  .socials__link {
+    color:  #fff;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    &:hover {
+      color: #dde4e2;
+    }
+  }
+}
+
+.flexbox-container {
+  display: flex;
+}
+.header-nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  .header__nav__list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  .header__nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding-left: 1rem; 
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.intro {
+  color: #fff;
+  background-image: url("img/intro-background.jpg");
+  background-size: cover;
+  height: 70vh;
+  background-position-y: 5%;
+  .card__main {
+    background-color: transparent;
+    color: #fff
+  }
+  .card__name {
+    font-size: 2rem;
+  }
+  .card__avatar {
+    padding-top: 0;
+    padding-bottom: 1%;
+  }
+  .card__avatar_img {
+    width: 10rem;
+  }
 }

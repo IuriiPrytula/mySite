@@ -8,8 +8,8 @@ module.exports = function(options) {
   return function() {
     return multipipe(
       gulp.src(options.src, {since: gulp.lastRun(options.since)}),
-      $.newer('public'),
-      gulp.dest('public/img')
+      $.newer(options.dst),
+      gulp.dest(options.dst)
     ).on('error', $.notify.onError());
   };
 };

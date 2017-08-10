@@ -4,7 +4,8 @@ html(lang="en")
   include ../templates/head
   
   body
-    .welcome-page__wrapper
+  .wrapper
+    .welcome-page
       .content
         .card
           .card__main
@@ -23,6 +24,27 @@ html(lang="en")
               li.welcome-page__nav__item: a.welcome-page__nav__link(href="#") About me
       .copyright
         p.copyright__content Iurii Prytula | Created with love | &copy; 2017
-      include ../templates/preloader
-    script(src="../js/jquery.min.js")
-    script(src="../js/main.js")
+    .parallax
+      .parallax__layer.parallax__layer_01
+        img.parallax__image.parallax__image_01(src="img/parallax-layers/mountains_for_parallax_1.png", alt="")
+      .parallax__layer.parallax__layer_02
+        img.parallax__image.parallax__image_02(src="img/parallax-layers/mountains_for_parallax_2.png", alt="")
+      .parallax__layer.parallax__layer_03
+        img.parallax__image.parallax__image_03(src="img/parallax-layers/mountains_for_parallax_3.png", alt="")
+      .parallax__layer.parallax__layer_04
+        img.parallax__image.parallax__image_04(src="img/parallax-layers/mountains_for_parallax_4.png", alt="")
+      .parallax__layer.parallax__layer_05
+        img.parallax__image.parallax__image_05(src="img/parallax-layers/mountains_for_parallax_5.png", alt="")
+      .parallax__layer.parallax__layer_06
+        img.parallax__image.parallax__image_06(src="img/parallax-layers/mountains_for_parallax_6.png", alt="")
+      .parallax__layer.parallax__layer_07
+        img.parallax__image.parallax__image_07(src="img/parallax-layers/mountains_for_parallax_7.png", alt="")
+      .parallax__layer.parallax__layer_08
+        img.parallax__image.parallax__image_08(src="img/parallax-layers/mountains_for_parallax_8.png", alt="")
+      .parallax__layer.parallax__layer_09
+        img.parallax__image.parallax__image_09(src="img/parallax-layers/mountains_for_parallax_9.png", alt="")
+      .parallax__layer.parallax__layer_10
+        img.parallax__image.parallax__image_10(src="img/parallax-layers/mountains_for_parallax_10.png", alt="")
+  include ../templates/preloader
+  script(src="../js/jquery.min.js")
+  script(src="../js/main.js")

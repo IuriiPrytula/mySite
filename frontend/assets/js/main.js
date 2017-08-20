@@ -104,7 +104,6 @@ $(document).ready(function () {
   layer.map(function(key, value) {
         var bottomPos = (window.innerHeight / 2) * (key / 100);
 
-        console.log(value);
         $(value).css({
           'transform' : 'translate3d(0, 0, 0)'
         });
@@ -121,7 +120,7 @@ $(document).ready(function () {
       layer.map(function(key, value) {
         var 
           bottomPos = (window.innerHeight / 2) * (key / 100),
-          widthPos = w * ((key) / 100),
+          widthPos = w * (key / 100),
           heightPos = h * (key / 100);
         console.log(value);
         $(value).css({

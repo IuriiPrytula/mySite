@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
     <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet"/>
   </head>
@@ -18,17 +17,17 @@
         <header class="header">
           <div class="container">
             <div class="flexbox-container">
-              <div class="header-socials">
+              <div class="socials">
                 <ul class="socials">
                   <li class="socials__item"><a class="socials__link socials__link_fb" href="#"><i class="fa fa-facebook" aria-hiddeb="true"></i></a></li>
                   <li class="socials__item"><a class="socials__link socials__link_li" href="#"><i class="fa fa-linkedin" aria-hiddeb="true"></i></a></li>
                   <li class="socials__item"><a class="socials__link socials__link_gh" href="#"><i class="fa fa-github" aria-hiddeb="true"></i></a></li>
                 </ul>
               </div>
-              <nav class="header-nav">
-                <ul class="header-nav__list">
-                  <li class="header-nav__item"><a class="header-nav__link" href="#">My portfolio</a></li>
-                  <li class="header-nav__item"><a class="header-nav__link" href="#">About me</a></li>
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a class="nav__link" href="#">My portfolio</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">About me</a></li>
                 </ul>
               </nav>
             </div>
@@ -59,7 +58,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-xs-12 around-sm">
               <div class="my-skills">
                 <h2 class="about-section__header about-section__header_desc">My skills</h2>
                 <div class="my-skills__desc">
@@ -102,18 +101,43 @@
           </div>
         </div>
       </div>
+      <div class="my-works">
+        <div class="container">
+          <h2 class="my-works__header">Watch my works</h2>
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 col-xs-12"><a class="my-works__item" href="#"><img class="item__thumb" src="img/fff.jpg" alt=""/>
+                <source/>
+                <p class="item__name">Some site 0</p></a></div>
+            <div class="col-lg-4 col-sm-6 col-xs-12"><a class="my-works__item" href="#"><img class="item__thumb" src="img/fff.jpg" alt=""/>
+                <source/>
+                <p class="item__name">Some site 1</p></a></div>
+            <div class="col-lg-4 col-sm-6 col-xs-12"><a class="my-works__item" href="#"><img class="item__thumb" src="img/fff.jpg" alt=""/>
+                <source/>
+                <p class="item__name">Some site 2</p></a></div>
+            <div class="col-lg-4 col-sm-6 col-xs-12"><a class="my-works__item" href="#"><img class="item__thumb" src="img/fff.jpg" alt=""/>
+                <source/>
+                <p class="item__name">Some site 3</p></a></div>
+            <div class="col-lg-4 col-sm-6 col-xs-12"><a class="my-works__item" href="#"><img class="item__thumb" src="img/fff.jpg" alt=""/>
+                <source/>
+                <p class="item__name">Some site 4</p></a></div>
+            <div class="col-lg-4 col-sm-6 col-xs-12"><a class="my-works__item" href="#"><img class="item__thumb" src="img/fff.jpg" alt=""/>
+                <source/>
+                <p class="item__name">Some site 5</p></a></div>
+          </div><a class="my-works__more-btn" href="#">More works</a>
+        </div>
+      </div>
       <div class="contact-section">
         <div class="container">
           <h2 class="contact-section__header">Contact me</h2>
           <form action="post">
             <div class="row">
-              <div class="col-lg-6 col-sm-12">
+              <div class="col-lg-6 col-xs-12">
                 <input class="contact-form__name" type="text" placeholder="Enter your name"/>
               </div>
-              <div class="col-lg-6 col-sm-12">
+              <div class="col-lg-6 col-xs-12">
                 <input class="contact-form__mail" type="text" placeholder="Enter your email"/>
               </div>
-              <div class="col-lg-12">
+              <div class="col-lg-12 col-xs-12">
                 <textarea class="contact-section__message" name="message" placeholder="Your message"></textarea>
               </div>
               <input class="contact-section__submit" type="submit" value="Send message"/>
@@ -121,6 +145,49 @@
           </form>
         </div>
       </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="flexbox-container">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">My portfolio</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">About me</a></li>
+              </ul>
+            </nav>
+            <div class="socials">
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link socials__link_fb" href="#"><i class="fa fa-facebook" aria-hiddeb="true"></i></a></li>
+                <li class="socials__item"><a class="socials__link socials__link_li" href="#"><i class="fa fa-linkedin" aria-hiddeb="true"></i></a></li>
+                <li class="socials__item"><a class="socials__link socials__link_gh" href="#"><i class="fa fa-github" aria-hiddeb="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__info">
+            <div class="row">
+              <div class="col-lg-3 col-sm-12 col-xs-12">
+                <ul class="contacts__list">
+                  <li class="contact__item"><a class="contacts__mobile" href="tel:+48690965363"><i class="fa fa-phone" aria-hidden="true"></i>
+                      <p class="contact__item__text">+48 69 096 5363</p></a></li>
+                  <li class="contact__item"><a class="contacts__skype" href="skype:iurii.prytula?chat"><i class="fa fa-skype" aria-hidden="true"></i>
+                      <p class="contact__item__text"> iurii.prytula</p></a></li>
+                  <li class="contact__item"><a class="contacts__telegram" href="tg://resolve?domain=iurii_p"><i class="fa fa-telegram" aria-hidden="true"> </i>
+                      <p class="contact__item__text">iurii_p</p></a></li>
+                  <li class="contact__item"><a class="contacts__email" href="mailto:iurii.pytula@gmail.com"><i class="fa fa-envelope" aria-hidden="true"> </i>
+                      <p class="contact__item__text">iurii.pytula@gmail.com</p></a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-sm-16 col-xs-12">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, aut sunt quo vel explicabo vitae eum modi veniam cupiditate.</p>
+              </div>
+              <div class="col-lg-6 col-sm-6 col-xs-12">
+                <div class="footer__copyright">
+                  <p class="copyright__content">Iurii Prytula | Created with love | &copy; 2017</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <div class="preloader">
       <div class="cssload-loader">
@@ -129,6 +196,7 @@
         <div class="cssload-inner cssload-three"></div><span class="percents"></span>
       </div>
     </div>
+    <script src="https://use.fontawesome.com/86873f40de.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/main.js"></script>
   </body>

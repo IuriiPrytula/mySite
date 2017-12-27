@@ -1,0 +1,23 @@
+{
+  "name": "mysite",
+  "description": "my portfolio",
+  "main": "index.js",
+  "authors": [
+    "Iurii Prytula <iurii.prytula@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/iuriiprytula/mysite",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "normalize-scss": "^3.0.3"
+  }
+}

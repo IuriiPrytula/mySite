@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+html(lang="en")
+  
+  include ../templates/head
+  body
+    .wrapper
+      .hero
+        .hero__bg: img(src="img/background.jpg", alt="")
+        
+        include ../templates/header
+        
+        .hero__content
+          .card
+            .card__main
+              .card__avatar
+                img.card__avatar_img(src="img/avatar.jpg", alt="My photo")
+              .card__name Iurii Prytula
+              .card__description: p.card__description_paragraph
+                | Hi, my name is Iurii, and i am Front-End Web Developer.
+        a.arrow-down-link(href="#about"): i.fa.fa-chevron-down(aria-hidden=true)
+      .about-section(id="about")
+        .container
+          .row
+            .col-lg-6.col-md-6.col-xs-12
+              .about-me
+                h2.about-section__header.about-section__header_about About me
+                img.about-me__avatar(src="img/avatar.jpg", alt="avatar")
+                h3.about-section__header.about-section__header_who-i-am Who I am
+                .about-me__desc
+                  p
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam blanditiis, ut odio, omnis aliquid debitis nobis perspiciatis quas sunt iusto delectus! Maiores tempore libero delectus blanditiis deserunt doloremque rerum sed.
+                  p
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam blanditiis, ut odio, omnis aliquid debitis nobis perspiciatis quas sunt iusto delectus! Maiores tempore libero delectus blanditiis deserunt doloremque rerum sed.
+            .col-lg-6.col-md-6.col-xs-12.around-sm
+              .my-skills
+                h2.about-section__header.about-section__header_desc My skills
+                .my-skills__desc
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero repudiandae sunt iusto quis sequi modi in porro incidunt, debitis quasi sit inventore odio numquam ducimus? Repellendus dolorum earum possimus saepe?
+                ul.my-skills__technologies-list
+                  - var skills = ["HTML", "CSS", "jQuery", "Pug", "Sass", "Gulp", "Git", "Bower", "PHP", "Wordpress"]
+                  - for(var i = 0; i < skills.length; i++)
+                      li.technologies-list__list-item
+                        - var img = "img/skills/" + skills[i] + ".png";
+                        img.list-item__icon(src=img)
+                        p.list-item__skill-name= skills[i]
+      
+      .my-works
+        .container
+          h2.my-works__header Watch my works
+          .row
+            - for(var i = 0; i < 6; i++)
+              .col-lg-4.col-sm-6.col-xs-12
+                a.my-works__item(href="#")
+                  img.item__thumb(src="img/fff.jpg", alt="")
+                  source
+                  p.item__name= "Some site " + i
+          a.my-works__more-btn(href="#") More works
+
+      .contact-section
+        .container
+          h2.contact-section__header Contact me
+          form(action="post")
+            .row
+              .col-lg-6.col-xs-12
+                input(type="text" placeholder="Enter your name").contact-form__name
+              .col-lg-6.col-xs-12
+                input(type="text" placeholder="Enter your email").contact-form__mail
+              .col-lg-12.col-xs-12
+                textarea(name="message", class="contact-section__message" placeholder="Your message")
+              input(type="submit" value="Send message" class="contact-section__submit")
+
+      include ../templates/footer
+
+    include ../templates/preloader
+
+    script(src="https://use.fontawesome.com/86873f40de.js")
+    script(src="../js/jquery.min.js")
+    script(src="../js/main.js")

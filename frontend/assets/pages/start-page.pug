@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="en")
+
+  include ../templates/head
+  
+  body
+  .wrapper
+    .welcome-page
+      .content
+        .card
+          .card__main
+            .card__avatar
+              img.card__avatar_img(src="img/avatar.jpg", alt="My photo")
+            .card__name Iurii Prytula
+            .card__description: p.card__description_paragraph Hello, this is my personal page.
+            .card__socials
+              ul.socials
+                li.socials__item: a.socials__link.socials__link_fb(href="#"): i.fa.fa-facebook(aria-hiddeb="true")
+                li.socials__item: a.socials__link.socials__link_li(href="#"): i.fa.fa-linkedin(aria-hiddeb="true")
+                li.socials__item: a.socials__link.socials__link_gh(href="#"): i.fa.fa-github(aria-hiddeb="true")
+          nav.welcome-page__nav 
+            ul.welcome-page__nav__list
+              li.welcome-page__nav__item: a.welcome-page__nav__link(href="#") My portfolio
+              li.welcome-page__nav__item: a.welcome-page__nav__link(href="#") About me
+      .copyright
+        p.copyright__content Iurii Prytula | Created with love | &copy; 2017
+    .parallax
+      - for(var i = 1; i <= 10; i++)
+        - var src = "img/parallax-layers/mountains_for_parallax_" + i + ".png";
+        - var parallaxLayerClass = "parallax__layer_" + i;
+        - var parallaxImageClass = ".parallax__image_" + i; 
+          div.parallax__layer(class=parallaxLayerClass)
+            img.parallax__image(class=parallaxImageClass src=src alt="parallax_image")
+  include ../templates/preloader
+  script(src="../js/jquery.min.js")
+  script(src="../js/main.js")
